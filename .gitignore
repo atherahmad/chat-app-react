@@ -1,0 +1,25 @@
+.env
+/node_modules
+
+
+//Backend
+
+/backend/node_modules
+/node_modules
+/backend/.env
+
+
+//Client
+
+/client/node_modules
+/client/.env
+
+
+
+// 
+
+ENV Variables required to run the APP for development purposes
+- PORT
+
+
+

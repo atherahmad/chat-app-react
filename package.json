@@ -1,0 +1,19 @@
+{
+  "name": "chat-app-react",
+  "version": "1.0.0",
+  "description": "MERN App with Socket.IO",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atherahmad/chat-app-react.git"
+  },
+  "author": "Ather Ahmad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atherahmad/mern-chat-app/issues"
+  },
+  "homepage": "https://github.com/atherahmad/mern-chat-app#readme"
+}
