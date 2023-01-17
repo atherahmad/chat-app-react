@@ -4,6 +4,7 @@ import cors from "cors";
 
 import authRouter from "./routes/authRoute.js";
 import chatRouter from "./routes/chatRoute.js";
+import { errorHandler } from "./middleware/error-middleware.js";
 
 const app = express();
 
@@ -26,5 +27,9 @@ app.get(`/`, (req, res) => {
         status: "success"
     })
 })
+
+// Using errorHandler as Middleware to manage errors
+
+app.use(errorHandler)
 
 app.listen(PORT, console.log(`Server running at port ${PORT}`))

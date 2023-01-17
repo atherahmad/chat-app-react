@@ -16,5 +16,12 @@ export const allChats = (req, res, next) => {
 };
 
 export const singleChat = (req, res, next) => {
-  res.status(200).json({ chat: req.params.chatId });
+  try{
+    const error = new Error("unable to reach")
+    throw error
+  }
+    catch(err){
+      err.status= 401
+      next(err)
+    }
 };
