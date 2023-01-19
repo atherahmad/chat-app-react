@@ -6,6 +6,20 @@ import authRouter from "./routes/authRoute.js";
 import chatRouter from "./routes/chatRoute.js";
 import { errorHandler } from "./middleware/error-middleware.js";
 
+/* const basket = [ {item : "Tee", quantity : 3, unitPrice: 20},
+                 {item : "Tee", quantity : 1, unitPrice: 10},
+                 {item : "Tee", quantity : 5, unitPrice: 50},
+                 {item : "Tee", quantity : 2, unitPrice: 15}
+            ];
+
+console.log(basket.reduce((accum, currentValue)=>{
+    return {
+        totalItems:currentValue.quantity + accum.totalItems, 
+        totalAmount:currentValue.unitPrice * currentValue.quantity + accum.totalAmount}
+},{totalItems:0, totalAmount: 0}))
+ */
+
+
 const app = express();
 
 //Using cors for cross platform access. Can avoid by proxy for development server.

@@ -1,4 +1,5 @@
 export const allChats = (req, res, next) => {
+
   res.status(200).json({
     chats: [
       {
@@ -16,12 +17,15 @@ export const allChats = (req, res, next) => {
 };
 
 export const singleChat = (req, res, next) => {
-  try{
-    const error = new Error("unable to reach")
-    throw error
-  }
-    catch(err){
-      err.status= 401
-      next(err)
+  
+  if(req)
+    {
+      const error = new Error("unable to reach")
+      error.status = 501
+      error.stack="unable"
+      throw error
+      
     }
+    else res.json("reached")
+
 };
