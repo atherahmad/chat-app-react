@@ -4,7 +4,9 @@
   "description": "MERN App with Socket.IO",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": " export NODE_ENV=development && concurrently  --kill-others \"npm run dev --prefix backend\" \"npm run dev --prefix client\"",
+    "prod": "export NODE_ENV=production && concurrently --kill-others \"npm run prod --prefix backend\" \"npm run prod --prefix client\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/atherahmad/mern-chat-app/issues"
   },
-  "homepage": "https://github.com/atherahmad/mern-chat-app#readme"
+  "homepage": "https://github.com/atherahmad/mern-chat-app#readme",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
 }

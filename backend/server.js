@@ -6,30 +6,19 @@ import authRouter from "./routes/authRoute.js";
 import chatRouter from "./routes/chatRoute.js";
 import { errorHandler } from "./middleware/error-middleware.js";
 
-/* const basket = [ {item : "Tee", quantity : 3, unitPrice: 20},
-                 {item : "Tee", quantity : 1, unitPrice: 10},
-                 {item : "Tee", quantity : 5, unitPrice: 50},
-                 {item : "Tee", quantity : 2, unitPrice: 15}
-            ];
-
-console.log(basket.reduce((accum, currentValue)=>{
-    return {
-        totalItems:currentValue.quantity + accum.totalItems, 
-        totalAmount:currentValue.unitPrice * currentValue.quantity + accum.totalAmount}
-},{totalItems:0, totalAmount: 0}))
- */
-
 
 const app = express();
+
+console.log("env", process.env.NODE_ENV)
 
 //Using cors for cross platform access. Can avoid by proxy for development server.
 
 app.use(cors());
 
 // Calling dotenv config method to load env variables
-
-dotenv.config();
-
+console.log("my env", process.env.NODE_ENV)
+dotenv.config({ path: `../.env.${process.env.NODE_ENV}`});
+console.log(process.env.PORT)
 const PORT = process.env.PORT || 4000;
 
 

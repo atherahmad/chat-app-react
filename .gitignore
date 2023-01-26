@@ -18,6 +18,10 @@
 
 // 
 
+.env.development
+.env.production
+
+
 ENV Variables required to run the APP for development purposes
 - PORT
 
